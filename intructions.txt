@@ -1,0 +1,18 @@
+
+Project: Naive Bayes variant implementation and experimentation
+
+Implement the Naive Bayes algorithm (varying the parameter k in Laplace smoothing; NOTE: the use of k here reflects the assumption 
+that every outcome is seen an extra k times, as described in Slide 33 of the "SupervisedLearningNaiveBayes-SS.pptx" file, and does 
+not correspond to the number of classes, as in page 12 of the cs229-notes2.pdf file) and evaluate it on at least one image 
+(using the multinomial event model) and one text data set (using both the multivariate Bernoulli vs multinomial event models). 
+Submit with your implementation files a report that describes the implementation choices as well as analysis and highlights of 
+experimental results on datasets of your choice. You must include data you have collected for your experiments or a link to the 
+source data if you used data available on the web.  Your report should be ~5 pages of 12 point, single column and spacing with 1" 
+margins and should be modeled after published articles using appropriate use of abstract, section headers (introduction, models, 
+experimental results, discussions, related work, conclusions) and citations to relevant existing research.  
+Use 5-fold cross validation to determine model accuracy. Grade will depend on the following items
+
+- correct implementation of all functionalities (you can use existing helper routines to gather data but all probability calculations should be made with code that you develop on your own): 40%
+- thorough experimental results: 25%
+- analysis of the results to highlight relative strengths and weaknesses of the multivariate Bernoulli vs multinomial event models, the use of Laplace smoothing, etc. 25%
+- professional writing style, use of appropriate references, etc.  10%
