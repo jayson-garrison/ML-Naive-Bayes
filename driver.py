@@ -1,5 +1,7 @@
 # driver to control the ML instances
 
+from model import GenericModel as g_model
+
 import numpy as np 
 import csv
 import random
@@ -22,22 +24,6 @@ print(len(aggregate_data))
 random.shuffle(aggregate_data)
 #print(aggregate_data[0:1])
 
-# partition the data into 5 sectors for 5-fold cross validation
-partition_index = int( len(aggregate_data) / 5 )
-print(partition_index)
-s = 0
-fold = []
-for i in range(5): #0-4
-    tr = aggregate_data.copy()
-    n = s + partition_index - 1
-    te = tr[s:n]
-    del tr[s:s + partition_index]
-
-    fold.append( (tr,te) )
-
-    s += partition_index
-    print(i)
-
 # 0-8399, 8400-
 # testing
 # reader.__next__()
@@ -50,3 +36,26 @@ for i in range(5): #0-4
 
 # array_data_point
 # # print(reader.__next__()[0])
+
+# partition the data into 5 sectors for 5-fold cross validation
+partition_index = int( len(aggregate_data) / 5 )
+print(partition_index)
+s = 0
+fold = []
+for i in range(5): #0-4
+    tr = aggregate_data.copy()
+    n = s + partition_index # was -1
+    te = tr[s:n]
+    del tr[s:s + partition_index]
+
+    fold.append( (tr,te) )
+
+    s += partition_index
+# fold is now a list of couples (tr, te) where tr and te are lists of 33600 and 8400 arrays respectively
+# each of len 785 where array[0] is the label and all other is img data.
+
+# print(len(fold))
+# print(len(fold[3][0][0]))
+# print(len(fold[3][1]))
+
+
