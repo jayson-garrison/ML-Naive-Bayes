@@ -7,6 +7,7 @@ class Model:
     # classify as in classify(datapoint) for a guess based on the trained model
     # this routine should also be generalized to accomodate for 
     # bernoulli event and multinomial events
+    # we apply rigor here
     def classify(unseen_value):
         # now that we have trained the model, we now can use our gained probabilities (organized in some DS)
         # to classify an unseen value
