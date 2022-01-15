@@ -28,4 +28,16 @@ print(tl)
 
 print(mylist)
 
+keys = [1,2,3,4]
+
+# mydict = dict.fromkeys(keys, np.array([1,2]))
+mydict = { 1: 2, 2: 4}
+
+mydict[1] = 5 + mydict[1]
+
+print(mydict)
+
+for pos in range(10):
+    print(pos)
+
 
