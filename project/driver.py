@@ -26,7 +26,7 @@ for row in reader:
 #print(aggregate_data[3])
 #print(type(aggregate_data[3]))
 # booleanize the data
-bool.booleanize(aggregate_data, 128)
+bool.booleanize(aggregate_data, 64)
 
 print(aggregate_data[3])
 print('length of aggregate data: ', len(aggregate_data))
@@ -74,6 +74,7 @@ for i in range(5): #0-4
 b_model1 = b_model(fold[0], labels, 785 )
 
 b_model1.train(0)
+b_model1.classify()
 b_model1.stats()
 
 

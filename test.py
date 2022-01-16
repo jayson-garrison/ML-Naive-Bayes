@@ -40,4 +40,10 @@ print(mydict)
 for pos in range(10):
     print(pos)
 
+mydict = {'george': 16, 'amber': 19}
+
+print(max(mydict.values()))
+
+print(list(mydict.keys())[list(mydict.values()).index(16)])  # Prints george
+
 
