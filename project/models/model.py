@@ -7,7 +7,7 @@ class GenericModel(ABC):
         self.labels = label_set
         self.n_features = num_features
         self.guesses = []
-        self.test_accuracy = 0
+        self.accuracies = []
         # model that we are using in supervised learning
         #self.statistical_inference = dict.fromkeys(label_set, np.zeros(num_features - 1))
         self.statistical_inference = []
@@ -32,32 +32,37 @@ class GenericModel(ABC):
     def classify(self):
         # now that we have trained the model, we now can use our gained probabilities (organized in some DS)
         # to classify an unseen value
-        correct_guess = 0
-        test_set = self.data_set[1]
-        possibilities = dict.fromkeys(self.labels, 0)
-        for image in test_set:
-            # init each possibility with ln(P(y_i))
-            for n in range(len(self.labels)):
-                possibilities[n] = np.log( self.class_occurances[n] / len(self.data_set[0]) )
-            
-            #print('possibilities after reset: ', possibilities)
-
-            for feat in range(1, self.n_features):
+        for partition_set in self.data_set:
+            correct_guess = 0
+            #test_set = self.data_set[1]
+            possibilities = dict.fromkeys(self.labels, 0)
+            for image in partition_set:
+                # init each possibility with ln(P(y_i))
                 for n in range(len(self.labels)):
-                    if image[feat] == 0: # consider the compliment
-                        possibilities[n] += np.log(1 - self.statistical_inference[n][feat - 1])
-                    else: 
-                        possibilities[n] += np.log(self.statistical_inference[n][feat - 1])
+                    possibilities[n] = np.log( self.class_occurances[n] / len(partition_set) )
+            
+                #print('possibilities after reset: ', possibilities)
 
-            #print('possibilities after cycle: ', possibilities)
-            self.guesses.append(list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))])
+                for feat in range(1, self.n_features):
+                    for n in range(len(self.labels)):
+                        if image[feat] == 0: # consider the compliment
+                            possibilities[n] += np.log(1 - self.statistical_inference[n][feat - 1])
+                        else: 
+                            possibilities[n] += np.log(self.statistical_inference[n][feat - 1])
 
-            if list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))] == image[0]: # get the key
-                correct_guess += 1
+                #print('possibilities after cycle: ', possibilities)
+                self.guesses.append(list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))])
 
-        self.test_accuracy = correct_guess / len(test_set)
-        print('correct guesses: ', correct_guess)
-        print('total length of test set: ', len(test_set))
+                if list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))] == image[0]: # get the key
+                    correct_guess += 1
+
+            self.accuracies.append(correct_guess / len(partition_set))
+        
+            print('correct guesses: ', correct_guess)
+            print('total length of set: ', len(partition_set))
+
+        # return a list with the accuracies
+        return self.accuracies
                 
     # train the model on the partitioned data set according to 5 fold cross validation
     # each data point in the set ought to be linear for generalization
@@ -93,7 +98,8 @@ class GenericModel(ABC):
         #print(self.statistical_inference[1])
         #print(self.statistical_inference[2])
         #print(self.statistical_inference[3])
-        print('test accuracy: ', self.test_accuracy)
+        print('training accuracy: ', self.accuracies[0])
+        print('test accuracy: ', self.accuracies[1])
         # print(self.guesses)
 
         #test_set = self.data_set[1][0:10]
