@@ -17,17 +17,21 @@ reader = csv.reader(data_file)
 
 # 42,000 images now in a list stores as row vectors
 reader.__next__()
+start_time = time.time()
 for row in reader:
     # convert to ints
     array_ints = list( map(int, row) )
 
     array_point = np.array(array_ints)
     aggregate_data.append(array_point)
+print("read data time: ", time.time() - start_time)
 
-#print(aggregate_data[3])
-#print(type(aggregate_data[3]))
 # booleanize the data
-bool.booleanize(aggregate_data, 64)
+boolean_param = 128
+start_time = time.time()
+bool.booleanize(aggregate_data, boolean_param)
+print("booleanize time: ", time.time() - start_time)
+print('boolean param: ', boolean_param)
 
 #print(aggregate_data[3])
 print('length of aggregate data: ', len(aggregate_data))
