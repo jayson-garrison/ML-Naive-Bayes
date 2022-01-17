@@ -7,6 +7,7 @@ from booleanize import Booleanize as bool
 import numpy as np 
 import csv
 import random
+import time
 
 # open the data file
 labels = [0,1,2,3,4,5,6,7,8,9]
@@ -28,7 +29,7 @@ for row in reader:
 # booleanize the data
 bool.booleanize(aggregate_data, 64)
 
-print(aggregate_data[3])
+#print(aggregate_data[3])
 print('length of aggregate data: ', len(aggregate_data))
 #print(np.add(aggregate_data[3], aggregate_data[3]))
 
@@ -73,8 +74,14 @@ for i in range(5): #0-4
 
 b_model1 = b_model(fold[0], labels, 785 )
 
-b_model1.train(0)
+start_time = time.time()
+b_model1.train(2)
+print("train time: ", time.time() - start_time)
+
+start_time = time.time()
 b_model1.classify()
+print("classify time: ", time.time() - start_time)
+
 b_model1.stats()
 
 

@@ -46,4 +46,7 @@ print(max(mydict.values()))
 
 print(list(mydict.keys())[list(mydict.values()).index(16)])  # Prints george
 
+for classification in range(10):
+    print(classification)
+
 

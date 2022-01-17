@@ -9,7 +9,11 @@ class GenericModel(ABC):
         self.guesses = []
         self.test_accuracy = 0
         # model that we are using in supervised learning
-        self.statistical_inference = dict.fromkeys(label_set, np.zeros(num_features - 1))
+        #self.statistical_inference = dict.fromkeys(label_set, np.zeros(num_features - 1))
+        self.statistical_inference = []
+        for index in range(10):
+            self.statistical_inference.append(np.zeros(num_features - 1))
+
         # complete partitioned dataset
         # data_set is a tuple (tr, te)
         self.data_set = data_set
@@ -29,7 +33,7 @@ class GenericModel(ABC):
         # now that we have trained the model, we now can use our gained probabilities (organized in some DS)
         # to classify an unseen value
         correct_guess = 0
-        test_set = self.data_set[1][0:10]
+        test_set = self.data_set[1]
         possibilities = dict.fromkeys(self.labels, 0)
         for image in test_set:
             # init each possibility with ln(P(y_i))
@@ -46,6 +50,8 @@ class GenericModel(ABC):
                         possibilities[n] += np.log(self.statistical_inference[n][feat - 1])
 
             #print('possibilities after cycle: ', possibilities)
+            self.guesses.append(list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))])
+
             if list(possibilities.keys())[list(possibilities.values()).index(max(possibilities.values()))] == image[0]: # get the key
                 correct_guess += 1
 
@@ -69,18 +75,30 @@ class GenericModel(ABC):
             self.class_occurances[label] += 1
             # increase feature instances
             self.feature_instances[label] = np.add(self.feature_instances[label], image)
-
+        # print('SUPER FINISHED')
         # train statistical_inference varies based on implementation
         
 
     # print stats like training accuracy, test accuracy, etc.
     def stats(self):
         print('class occurances: ', self.class_occurances)
-        #print(len(self.feature_instances[0]))
-        print(self.feature_instances[6])
-        #print(self.statistical_inference[0])
-        #print(self.statistical_inference[1])
+        print('length of feat occur: ', len(self.feature_instances[0]))
+        #print(self.feature_instances[0])
+        #print(self.feature_instances[1])
+        #print(self.feature_instances[2])
+        #print(self.feature_instances[3])
         # obtain training accuracy
         # obtain testing accuracy
-        print(self.test_accuracy)
+        #print(self.statistical_inference[0])
+        #print(self.statistical_inference[1])
+        #print(self.statistical_inference[2])
+        #print(self.statistical_inference[3])
+        print('test accuracy: ', self.test_accuracy)
+        # print(self.guesses)
+
+        #test_set = self.data_set[1][0:10]
+
+        #for image in test_set:
+            #print(image[0], end=', ')
+        #print()
         pass

@@ -12,9 +12,12 @@ class BernoulliModel(GM):
     def train(self, k):
         super().train() # ret?
         # now we populate statistical_inference with bernoulli methodology
+        # ERROR IT LOOKS LIKE THAT 2-9 ARE ALL SAME FOR statistical_inference
         for classification in range(10):
             for feat in range(1, self.n_features):
                 self.statistical_inference[classification][feat-1] = (self.feature_instances[classification][feat] + k) / ( self.class_occurances[classification] + self.n_features * k )
+
+        #print('SUB FINISHED')
 
     def stats(self):
         super().stats()
