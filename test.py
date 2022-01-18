@@ -1,8 +1,8 @@
 import numpy as np 
 
-import tensorflow as tf
+#import tensorflow as tf
 
-import tensorflow_datasets as tfds
+#import tensorflow_datasets as tfds
 
 import random
 
@@ -50,3 +50,13 @@ for classification in range(10):
     print(classification)
 
 
+print(sum(keys))
+
+
+h = 9
+g = 8
+
+print(f'number of people: {h}')
+
+s = f'number of people: {h} number of girls {g}'
+print(s)

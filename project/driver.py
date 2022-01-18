@@ -82,43 +82,54 @@ test_accuracies = []
 train_accuracies = []
 trial_num = 0
 
-# for laplace_k in range(5):
-#     results.write('Laplace Smoothing k = ', laplace_k, '\n')
-#     for tr_te_partition in fold:
-#         b_model1 = b_model(fold[tr_te_partition], labels, 785)
+for laplace_k in range(5):
+    results.write(f'Laplace Smoothing k = {laplace_k}\n')
+    for tr_te_partition in fold:
+        b_model1 = b_model(tr_te_partition, labels, 785)
 
-#         # train the current partition with the current k
-#         start_time = time.time()
-#         b_model1.train(laplace_k)
-#         results.write("train time: ", time.time() - start_time, '\n')
+        # train the current partition with the current k
+        start_time = time.time()
+        b_model1.train(laplace_k)
+        results.write(f'train time: {time.time() - start_time}\n')
 
-#         # classify on training set and test set and evaluate accuracy
-#         start_time = time.time()
-#         coupled_accuracies = b_model1.classify()
-#         results.write("classify aggregate time: ", time.time() - start_time, '\n')
+        # classify on training set and test set and evaluate accuracy
+        start_time = time.time()
+        coupled_accuracies = b_model1.classify()
+        results.write(f'classify aggregate time: {time.time() - start_time}\n')
 
-#         train_accuracies.append(coupled_accuracies[0])
-#         test_accuracies.append(coupled_accuracies[1])
+        train_accuracies.append(coupled_accuracies[0])
+        test_accuracies.append(coupled_accuracies[1])
+        
+        b_model1.stats()
 
-#     results.write('\n')
-#     results.write('avg training accuracy for Laplace Smoothing k = ', laplace_k, ': ', sum(train_accuracies) / len(train_accuracies), '\n')
-#     results.write('avg test accuracy for Laplace Smoothing k = ', laplace_k, ': ', sum(test_accuracies) / len(test_accuracies), '\n')
-#     results.write('\n')
+    # writing
+    results.write('\n')
+    results.write(f'avg training accuracy for Laplace Smoothing k = {laplace_k}: {sum(train_accuracies) / len(train_accuracies)}\n')
+    results.write(f'avg test accuracy for Laplace Smoothing k = {laplace_k}: {sum(test_accuracies) / len(test_accuracies)}\n')
+    results.write('\n')
+    results.write('--------------------------New Trial Session--------------------------\n')
+    
+    print('train accuracies for laplace k = ', laplace_k, ': ', train_accuracies)
+    print('test accuracies for laplace k = ', laplace_k, ': ', test_accuracies)
+    
+    print('avg train accuracy: ', sum(train_accuracies) / len(train_accuracies))
+    print('avg test accuracy: ', sum(test_accuracies) / len(test_accuracies))
 
-#     test_accuracies = []
-#     train_accuracies = []
+    # reset
+    test_accuracies = []
+    train_accuracies = []
 
 
-b_model1 = b_model(fold[0], labels, 785 )
+# b_model1 = b_model(fold[0], labels, 785 )
 
-start_time = time.time()
-b_model1.train(0)
-print("train time: ", time.time() - start_time)
+# start_time = time.time()
+# b_model1.train(0)
+# print("train time: ", time.time() - start_time)
 
-start_time = time.time()
-accur = b_model1.classify()
-print("classify time: ", time.time() - start_time)
+# start_time = time.time()
+# accur = b_model1.classify()
+# print("classify time: ", time.time() - start_time)
 
-b_model1.stats()
+# b_model1.stats()
 
 
