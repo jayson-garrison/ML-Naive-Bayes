@@ -6,7 +6,7 @@ class BernoulliModel(GM):
         super().__init__(data_set, label_set, num_features)
 
     def classify(self):
-        super().classify() # ret?
+        return super().classify() # ret?
 
     # bernoulli implementation here
     def train(self, k):

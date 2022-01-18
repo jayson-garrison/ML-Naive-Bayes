@@ -118,6 +118,8 @@ for laplace_k in range(5):
     # reset
     test_accuracies = []
     train_accuracies = []
+    
+results.close()
 
 
 # b_model1 = b_model(fold[0], labels, 785 )
