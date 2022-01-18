@@ -8,3 +8,12 @@ class Booleanize:
                     row[pos] = 1
                 else:
                     row[pos] = 0
+      
+    # booleanize data set regarding if the feature occurs or not              
+    def booleanize_occurances(data_set):
+        for row in data_set:
+            for pos in range(1,len(row)):
+                if row[pos] != 0:
+                    row[pos] = 1
+                else:
+                    row[pos] = 0

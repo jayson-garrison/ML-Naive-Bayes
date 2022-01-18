@@ -1,1 +1,80 @@
+Laplace Smoothing k = 0
+train time: 0.0949704647064209
+classify aggregate time: 425.4688756465912
+train time: 0.17052102088928223
+classify aggregate time: 416.06264090538025
+train time: 0.08960819244384766
+classify aggregate time: 439.28761887550354
+train time: 0.30058884620666504
+classify aggregate time: 438.9750144481659
+train time: 0.31197261810302734
+classify aggregate time: 421.75466561317444
 
+avg training accuracy for Laplace Smoothing k = 0: 0.8408273809523811
+avg test accuracy for Laplace Smoothing k = 0: 0.8361428571428572
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 1
+train time: 0.09124207496643066
+classify aggregate time: 413.14318799972534
+train time: 0.08774828910827637
+classify aggregate time: 414.38091564178467
+train time: 0.09134697914123535
+classify aggregate time: 417.06791067123413
+train time: 0.09774661064147949
+classify aggregate time: 421.4366846084595
+train time: 0.09387326240539551
+classify aggregate time: 429.85212087631226
+
+avg training accuracy for Laplace Smoothing k = 1: 0.827
+avg test accuracy for Laplace Smoothing k = 1: 0.8257619047619048
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 2
+train time: 0.09367775917053223
+classify aggregate time: 424.4783778190613
+train time: 0.08977842330932617
+classify aggregate time: 419.99271416664124
+train time: 0.0910029411315918
+classify aggregate time: 421.11953353881836
+train time: 0.09377098083496094
+classify aggregate time: 418.9227821826935
+train time: 0.091064453125
+classify aggregate time: 422.09493827819824
+
+avg training accuracy for Laplace Smoothing k = 2: 0.8155595238095238
+avg test accuracy for Laplace Smoothing k = 2: 0.8145476190476192
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 3
+train time: 0.0896756649017334
+classify aggregate time: 421.4461178779602
+train time: 0.08872842788696289
+classify aggregate time: 419.4002833366394
+train time: 0.08872771263122559
+classify aggregate time: 418.854367017746
+train time: 0.09009861946105957
+classify aggregate time: 421.45269751548767
+train time: 0.09127688407897949
+classify aggregate time: 419.6272180080414
+
+avg training accuracy for Laplace Smoothing k = 3: 0.803845238095238
+avg test accuracy for Laplace Smoothing k = 3: 0.8025952380952381
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 4
+train time: 0.08790183067321777
+classify aggregate time: 417.6710228919983
+train time: 0.08929705619812012
+classify aggregate time: 421.1630687713623
+train time: 0.08911609649658203
+classify aggregate time: 417.23558473587036
+train time: 0.0915520191192627
+classify aggregate time: 418.900226354599
+train time: 0.08933520317077637
+classify aggregate time: 420.0024502277374
+
+avg training accuracy for Laplace Smoothing k = 4: 0.7935416666666667
+avg test accuracy for Laplace Smoothing k = 4: 0.7929285714285714
+
+--------------------------New Trial Session--------------------------
