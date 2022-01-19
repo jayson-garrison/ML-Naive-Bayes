@@ -3,6 +3,7 @@
 from re import X
 from models.model import GenericModel as g_model
 from models.bernoulli_model import BernoulliModel as b_model
+from models.multinomial_model import MultinomialModel as m_model
 from five_fold import FiveFold as ff
 from booleanize import Booleanize as bool
 
@@ -54,14 +55,14 @@ print(type(aggregate_data[5]))
 # booleanize the data
 boolean_param = 64
 start_time = time.time()
-bool.booleanize(aggregate_data, boolean_param)
+#bool.booleanize(aggregate_data, boolean_param)
 print("booleanize img data time: ", time.time() - start_time)
 print('boolean param: ', boolean_param)
 
 start_time = time.time()
 # aggregate_mail_boolean_data
 # overrides the current data set
-bool.booleanize_occurances(aggregate_mail_data)
+# bool.booleanize_occurances(aggregate_mail_data)
 print("booleanize mail data time: ", time.time() - start_time)
 
 
@@ -168,18 +169,20 @@ trial_num = 0
 
 
 if True:
-    b_model1 = b_model(mail_fold[0], mail_labels, 3001 )
+    #b_model1 = b_model(mail_fold[0], mail_labels, 3001) # k = .1,.2,.3
+    #m_model1 = m_model(mail_fold[0], mail_labels, 3001)
+    m_model1 = m_model(img_fold[0], img_labels, 785)
     #b_model1 = b_model(img_fold[0], img_labels, 785 )
 
     start_time = time.time()
-    b_model1.train(0)
+    m_model1.train(1)
     print("train time: ", time.time() - start_time)
 
     start_time = time.time()
-    accur = b_model1.classify()
+    accur = m_model1.classify()
     print("classify time: ", time.time() - start_time)
 
-    b_model1.stats()
+    m_model1.stats()
 
 
 
