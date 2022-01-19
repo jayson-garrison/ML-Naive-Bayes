@@ -16,47 +16,51 @@ import random
 
 mylist = ['1','2','3','4']
 print(mylist)
-#random.shuffle(mylist)
-#print(mylist)
-print(mylist[0:1])
-x = 1
-z = 3
-tl = mylist[x:z]
-del mylist[x:z]
-
-print(tl)
-
+del(mylist[len(mylist) - 1])
 print(mylist)
 
-keys = [1,2,3,4]
+random.randint(0, 100)
+#random.shuffle(mylist)
+#print(mylist)
+# print(mylist[0:1])
+# x = 1
+# z = 3
+# tl = mylist[x:z]
+# del mylist[x:z]
 
-# mydict = dict.fromkeys(keys, np.array([1,2]))
-mydict = { 1: 2, 2: 4}
+# print(tl)
 
-mydict[1] = 5 + mydict[1]
+# print(mylist)
 
-print(mydict)
+# keys = [1,2,3,4]
 
-for pos in range(10):
-    print(pos)
+# # mydict = dict.fromkeys(keys, np.array([1,2]))
+# mydict = { 1: 2, 2: 4}
 
-mydict = {'george': 16, 'amber': 19}
+# mydict[1] = 5 + mydict[1]
 
-print(max(mydict.values()))
+# print(mydict)
 
-print(list(mydict.keys())[list(mydict.values()).index(16)])  # Prints george
+# for pos in range(10):
+#     print(pos)
 
-for classification in range(10):
-    print(classification)
+# mydict = {'george': 16, 'amber': 19}
+
+# print(max(mydict.values()))
+
+# print(list(mydict.keys())[list(mydict.values()).index(16)])  # Prints george
+
+# for classification in range(10):
+#     print(classification)
 
 
-print(sum(keys))
+# print(sum(keys))
 
 
-h = 9
-g = 8
+# h = 9
+# g = 8
 
-print(f'number of people: {h}')
+# print(f'number of people: {h}')
 
-s = f'number of people: {h} number of girls {g}'
-print(s)
+# s = f'number of people: {h} number of girls {g}'
+# print(s)

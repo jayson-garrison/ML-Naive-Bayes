@@ -12,10 +12,10 @@ class BernoulliModel(GM):
     def train(self, k):
         super().train() # ret?
         # now we populate statistical_inference with bernoulli methodology
-        for classification in range(10):
+        for classification in range(len(self.labels)): # was range(10)
             for feat in range(1, self.n_features):
                 self.statistical_inference[classification][feat-1] = (self.feature_instances[classification][feat] + k) / ( self.class_occurances[classification] + self.n_features * k )
-
+                # self.statistical_inference[classification][feat-1] = (self.feature_instances[classification][feat] + k) / ( self.class_occurances[classification] + self.feature_instances[classification][feat] * k )            
         #print('SUB FINISHED')
 
     def stats(self):
