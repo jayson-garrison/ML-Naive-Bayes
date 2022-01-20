@@ -10,8 +10,8 @@ With two different data sets, cosisting of image data and word data, apply the N
 
 ## Data Sets Used
 
-1. [Images](https://www.kaggle.com/c/digit-recognizer/data?select=train.csv)
-2. [Words](https://www.kaggle.com/balaka18/email-spam-classification-dataset-csv)
+1. [Images](https://www.kaggle.com/c/digit-recognizer/data?select=train.csv): data set size of 42,000 28 by 28 pixel images of digits 0-9.
+2. [Words](https://www.kaggle.com/balaka18/email-spam-classification-dataset-csv): data set size of ~5,000 emails with a dictionary size of ~3,000 words classified as either spam or ham.
 
 
 ## Interesting Points to Consider
@@ -31,15 +31,21 @@ I have learned to implement this machine learning algorithm in Python. By doing 
 - Linux based development
 - Anaconda to manage several packages
 
+### Machine Learning
+- Implemented the Naive Bayes Classifier
+- Implemented two different probabilistic models for training: multivariate Bernoulli event model and multinomial event model
+- Verified testing and training accuracy using five fold cross validation
+- Achieved acceptable of ~84% for image classification and ~95% for mail classification
+
 ### Packages
 
 - NumPy
 
 ### Insight
 
-- Manage and organize large data sets
-- Implement abstract classes and methods
-- Generalize a modular model implementation to support both data sets
+- Managed and organized large data sets
+- Implemented abstract classes and methods
+- Generalized a modular model implementation to support both data sets
 - Learned the application of Bayesian statistics for machine learning algorithms
 - Analyzed the impact of algorithmic efficiency in the context of large data processing
 - Utilized NumPy to handle large arrays of data
