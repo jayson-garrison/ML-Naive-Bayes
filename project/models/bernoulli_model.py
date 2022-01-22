@@ -1,3 +1,10 @@
+""""
+Author: Jayson C. Garrison
+Dates: 01/15/2022
+Course: CS-5333 (Machine Learning)
+Description: Multi-variate Bernoulli event model implementation
+GitHub: https://github.com/jayson-garrison/ML-Naive-Bayes
+"""
 from models.model import GenericModel as GM
 
 class BernoulliModel(GM):
@@ -16,7 +23,6 @@ class BernoulliModel(GM):
             for feat in range(1, self.n_features):
                 self.statistical_inference[classification][feat-1] = (self.feature_instances[classification][feat] + k) / ( self.class_occurances[classification] + self.n_features * k )
                 # self.statistical_inference[classification][feat-1] = (self.feature_instances[classification][feat] + k) / ( self.class_occurances[classification] + self.feature_instances[classification][feat] * k )            
-        #print('SUB FINISHED')
 
     def stats(self):
         super().stats()

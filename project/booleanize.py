@@ -1,3 +1,11 @@
+""""
+Author: Jayson C. Garrison
+Dates: 01/18/2022
+Course: CS-5333 (Machine Learning)
+Description: Function to booleanize a given data set
+GitHub: https://github.com/jayson-garrison/ML-Naive-Bayes
+"""
+
 class Booleanize:
 
     # booleanize a data set given a threshold

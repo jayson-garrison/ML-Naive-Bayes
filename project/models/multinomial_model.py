@@ -1,3 +1,10 @@
+""""
+Author: Jayson C. Garrison
+Dates: 01/15/2022
+Course: CS-5333 (Machine Learning)
+Description: Multinomial event model implementation
+GitHub: https://github.com/jayson-garrison/ML-Naive-Bayes
+"""
 from models.model import GenericModel as GM 
 
 class MultinomialModel(GM):

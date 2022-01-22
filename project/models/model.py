@@ -1,3 +1,10 @@
+""""
+Author: Jayson C. Garrison
+Dates: 01/14/2022
+Course: CS-5333 (Machine Learning)
+Description: Machine Learning model that classifies objects using Naive Bayes classification
+GitHub: https://github.com/jayson-garrison/ML-Naive-Bayes
+"""
 from abc import ABC, abstractmethod
 import numpy as np
 
@@ -80,7 +87,6 @@ class GenericModel(ABC):
             self.class_occurances[label] += 1
             # increase feature instances
             self.feature_instances[label] = np.add(self.feature_instances[label], image)
-        # print('SUPER FINISHED')
         # train statistical_inference varies based on implementation
         
 
@@ -88,23 +94,7 @@ class GenericModel(ABC):
     def stats(self):
         print('class occurances: ', self.class_occurances)
         print('length of feat occur: ', len(self.feature_instances[0]))
-        #print(self.feature_instances[0])
-        #print(self.feature_instances[1])
-        #print(self.feature_instances[2])
-        #print(self.feature_instances[3])
         # obtain training accuracy
         # obtain testing accuracy
-        #print(self.statistical_inference[0])
-        #print(self.statistical_inference[1])
-        #print(self.statistical_inference[2])
-        #print(self.statistical_inference[3])
         print('training accuracy: ', self.accuracies[0])
         print('test accuracy: ', self.accuracies[1])
-        # print(self.guesses)
-
-        #test_set = self.data_set[1][0:10]
-
-        #for image in test_set:
-            #print(image[0], end=', ')
-        #print()
-        pass

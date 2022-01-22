@@ -1,3 +1,10 @@
+""""
+Author: Jayson C. Garrison
+Dates: 01/19/2022
+Course: CS-5333 (Machine Learning)
+Description: Function that partitions data according to five fold cross validation
+GitHub: https://github.com/jayson-garrison/ML-Naive-Bayes
+"""
 class FiveFold:
 
     # partition a data set into a list of 5 tuples for training and testing
