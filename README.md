@@ -50,3 +50,11 @@ I have learned to implement this machine learning algorithm in Python. By doing 
 - Analyzed the impact of algorithmic efficiency in the context of large data processing
 - Utilized NumPy to handle large arrays of data
 
+### Typesetting
+
+- Reported important information regarding this project in LaTeX
+- Mathematical typesetting
+- Algorithmic typesetting
+- Utilization of figures
+- Usage of offical documentation
+
