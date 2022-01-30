@@ -35,7 +35,6 @@ class GenericModel(ABC):
     # this routine should also be generalized to accomodate for 
     # bernoulli event and multinomial events
     # we apply rigor here
-    @abstractmethod
     def classify(self):
         # now that we have trained the model, we now can use our gained probabilities (organized in some DS)
         # to classify an unseen value

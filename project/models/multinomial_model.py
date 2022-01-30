@@ -12,7 +12,6 @@ class MultinomialModel(GM):
     def __init__(self, data_set, label_set, num_features):
         super().__init__(data_set, label_set, num_features)
 
-    
     def classify(self):
         return super().classify()
 

@@ -71,7 +71,7 @@ print('boolean param: ', boolean_param)
 start_time = time.time()
 # aggregate_mail_boolean_data
 # overrides the current data set
-# bool.booleanize_occurances(aggregate_mail_data) # on or off
+bool.booleanize_occurances(aggregate_mail_data) # on or off
 print("booleanize mail data time: ", time.time() - start_time)
 
 
@@ -144,20 +144,20 @@ if False:
 
 # single testing
 if True:
-    #b_model1 = b_model(mail_fold[0], mail_labels, 3001) # k = .1,.2,.3
-    m_model1 = m_model(mail_fold[0], mail_labels, 3001)
-    #m_model1 = m_model(img_fold[0], img_labels, 785)
-    #b_model1 = b_model(img_fold[0], img_labels, 785 )
+    #model1 = b_model(mail_fold[0], mail_labels, 3001) # k = .1,.2,.3
+    model1 = m_model(mail_fold[0], mail_labels, 3001)
+    #model1 = m_model(img_fold[0], img_labels, 785)
+    #model1 = b_model(img_fold[0], img_labels, 785 )
 
     start_time = time.time()
-    m_model1.train(10)
+    model1.train(2)
     print("train time: ", time.time() - start_time)
 
     start_time = time.time()
-    accur = m_model1.classify()
+    accur = model1.classify()
     print("classify time: ", time.time() - start_time)
 
-    m_model1.stats()
+    model1.stats()
 
 
 
