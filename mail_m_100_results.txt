@@ -1,0 +1,16 @@
+Laplace Smoothing k = 100
+train time: 0.026457786560058594
+classify aggregate time: 48.224992752075195
+train time: 0.02677464485168457
+classify aggregate time: 48.42729568481445
+train time: 0.025809288024902344
+classify aggregate time: 48.54673099517822
+train time: 0.026384592056274414
+classify aggregate time: 48.36079454421997
+train time: 0.025851726531982422
+classify aggregate time: 47.47172570228577
+
+avg training accuracy for Laplace Smoothing k = 100: 0.9040618955512573
+avg test accuracy for Laplace Smoothing k = 100: 0.9038684719535783
+
+--------------------------New Trial Session--------------------------

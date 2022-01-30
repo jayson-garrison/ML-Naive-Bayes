@@ -64,14 +64,14 @@ print(type(aggregate_data[5]))
 # booleanize the data
 boolean_param = 64
 start_time = time.time()
-# bool.booleanize(aggregate_data, boolean_param) # on or off
+bool.booleanize(aggregate_data, boolean_param) # on or off
 print("booleanize img data time: ", time.time() - start_time)
 print('boolean param: ', boolean_param)
 
 start_time = time.time()
 # aggregate_mail_boolean_data
 # overrides the current data set
-bool.booleanize_occurances(aggregate_mail_data) # on or off
+#bool.booleanize_occurances(aggregate_mail_data) # on or off
 print("booleanize mail data time: ", time.time() - start_time)
 
 
@@ -96,32 +96,32 @@ mail_fold = ff.five_fold(aggregate_mail_data)
 # each of len 785 where array[0] is the label and all other is img data.
 
 # create instance of model
-results = open('image_results.txt', "w")
+results = open('mail_m_100_results.txt', "w")
 test_accuracies = []
 train_accuracies = []
 trial_num = 0
 
 # five fold cross validation 
-if False:
-    for laplace_k in range(5):
+if True:
+    for laplace_k in range(100,101):
         results.write(f'Laplace Smoothing k = {laplace_k}\n')
-        for tr_te_partition in img_fold:
-            b_model1 = b_model(tr_te_partition, img_labels, 785)
+        for tr_te_partition in mail_fold: #img_fold or mail_fold
+            model1 = m_model(tr_te_partition, mail_labels, 3001) #img_labels or mail_labels
 
             # train the current partition with the current k
             start_time = time.time()
-            b_model1.train(laplace_k)
+            model1.train(laplace_k)
             results.write(f'train time: {time.time() - start_time}\n')
 
             # classify on training set and test set and evaluate accuracy
             start_time = time.time()
-            coupled_accuracies = b_model1.classify()
+            coupled_accuracies = model1.classify()
             results.write(f'classify aggregate time: {time.time() - start_time}\n')
 
             train_accuracies.append(coupled_accuracies[0])
             test_accuracies.append(coupled_accuracies[1])
         
-            b_model1.stats()
+            model1.stats()
 
         # writing
         results.write('\n')
@@ -143,14 +143,14 @@ if False:
     results.close()
 
 # single testing
-if True:
+if False:
     #model1 = b_model(mail_fold[0], mail_labels, 3001) # k = .1,.2,.3
     model1 = m_model(mail_fold[0], mail_labels, 3001)
     #model1 = m_model(img_fold[0], img_labels, 785)
     #model1 = b_model(img_fold[0], img_labels, 785 )
 
     start_time = time.time()
-    model1.train(2)
+    model1.train(4)
     print("train time: ", time.time() - start_time)
 
     start_time = time.time()

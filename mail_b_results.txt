@@ -1,0 +1,317 @@
+Laplace Smoothing k = 0
+train time: 0.025258779525756836
+classify aggregate time: 49.11282753944397
+train time: 0.025997161865234375
+classify aggregate time: 48.19756484031677
+train time: 0.02492547035217285
+classify aggregate time: 47.13775038719177
+train time: 0.024808883666992188
+classify aggregate time: 47.09845542907715
+train time: 0.025377511978149414
+classify aggregate time: 47.26365375518799
+
+avg training accuracy for Laplace Smoothing k = 0: 0.9320599613152805
+avg test accuracy for Laplace Smoothing k = 0: 0.9079303675048356
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 1
+train time: 0.02460169792175293
+classify aggregate time: 47.02822160720825
+train time: 0.025330305099487305
+classify aggregate time: 47.06692457199097
+train time: 0.02463698387145996
+classify aggregate time: 47.2421441078186
+train time: 0.024665117263793945
+classify aggregate time: 47.07910871505737
+train time: 0.025105714797973633
+classify aggregate time: 47.14884853363037
+
+avg training accuracy for Laplace Smoothing k = 1: 0.8746131528046421
+avg test accuracy for Laplace Smoothing k = 1: 0.8709864603481625
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 2
+train time: 0.025467634201049805
+classify aggregate time: 47.4608314037323
+train time: 0.025372982025146484
+classify aggregate time: 47.187589168548584
+train time: 0.02544379234313965
+classify aggregate time: 47.48664999008179
+train time: 0.02523326873779297
+classify aggregate time: 47.12368655204773
+train time: 0.02552008628845215
+classify aggregate time: 47.58505439758301
+
+avg training accuracy for Laplace Smoothing k = 2: 0.8698742746615087
+avg test accuracy for Laplace Smoothing k = 2: 0.8653771760154738
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 3
+train time: 0.025043249130249023
+classify aggregate time: 47.430304765701294
+train time: 0.02478170394897461
+classify aggregate time: 47.56272292137146
+train time: 0.025151729583740234
+classify aggregate time: 47.66376614570618
+train time: 0.025004148483276367
+classify aggregate time: 47.732887268066406
+train time: 0.025618314743041992
+classify aggregate time: 47.51697635650635
+
+avg training accuracy for Laplace Smoothing k = 3: 0.8649419729206962
+avg test accuracy for Laplace Smoothing k = 3: 0.8609284332688588
+
+--------------------------New Trial Session--------------------------
+Laplace Smoothing k = 4
+train time: 0.02481865882873535
+classify aggregate time: 47.490257263183594
+train time: 0.0253140926361084
+classify aggregate time: 47.73307800292969
+train time: 0.024647951126098633
+classify aggregate time: 47.64742302894592
+train time: 0.02583146095275879
+classify aggregate time: 47.53846502304077
+train time: 0.025296449661254883
+classify aggregate time: 47.68534278869629
+
+avg training accuracy for Laplace Smoothing k = 4: 0.8611702127659575
+avg test accuracy for Laplace Smoothing k = 4: 0.8580270793036752
+
+--------------------------New Trial Session--------------------------
+
+Terminal Log: 
+
+read image data time:  4.974772691726685
+read mail data time:  2.10683012008667
+[1 4 5 ... 0 0 0]
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+booleanize img data time:  4.76837158203125e-07
+boolean param:  64
+booleanize mail data time:  3.863105535507202
+length of aggregate img data:  42000
+length of aggregate mail data:  5170
+pdex:  8400
+pdex:  1034
+/home/jayso/CS-5333/ML-Naive-Bayes/project/models/model.py:57: RuntimeWarning: divide by zero encountered in log
+  possibilities[n] += np.log(self.statistical_inference[n][feat - 1])
+correct guesses:  3846
+total length of set:  4136
+correct guesses:  939
+total length of set:  1034
+class occurances:  {0: 2901, 1: 1235}
+length of feat occur:  3001
+training accuracy:  0.9298839458413927
+test accuracy:  0.9081237911025145
+correct guesses:  3846
+total length of set:  4136
+correct guesses:  945
+total length of set:  1034
+class occurances:  {0: 2948, 1: 1188}
+length of feat occur:  3001
+training accuracy:  0.9298839458413927
+test accuracy:  0.913926499032882
+correct guesses:  3850
+total length of set:  4136
+correct guesses:  933
+total length of set:  1034
+class occurances:  {0: 2949, 1: 1187}
+length of feat occur:  3001
+training accuracy:  0.9308510638297872
+test accuracy:  0.902321083172147
+correct guesses:  3859
+total length of set:  4136
+correct guesses:  942
+total length of set:  1034
+class occurances:  {0: 2950, 1: 1186}
+length of feat occur:  3001
+training accuracy:  0.933027079303675
+test accuracy:  0.9110251450676983
+correct guesses:  3874
+total length of set:  4136
+correct guesses:  935
+total length of set:  1034
+class occurances:  {0: 2932, 1: 1204}
+length of feat occur:  3001
+training accuracy:  0.9366537717601547
+test accuracy:  0.9042553191489362
+train accuracies for laplace k =  0 :  [0.9298839458413927, 0.9298839458413927, 0.9308510638297872, 0.933027079303675, 0.9366537717601547]
+test accuracies for laplace k =  0 :  [0.9081237911025145, 0.913926499032882, 0.902321083172147, 0.9110251450676983, 0.9042553191489362]
+avg train accuracy:  0.9320599613152805
+avg test accuracy:  0.9079303675048356
+correct guesses:  3606
+total length of set:  4136
+correct guesses:  911
+total length of set:  1034
+class occurances:  {0: 2901, 1: 1235}
+length of feat occur:  3001
+training accuracy:  0.8718568665377177
+test accuracy:  0.8810444874274661
+correct guesses:  3610
+total length of set:  4136
+correct guesses:  906
+total length of set:  1034
+class occurances:  {0: 2948, 1: 1188}
+length of feat occur:  3001
+training accuracy:  0.8728239845261122
+test accuracy:  0.8762088974854932
+correct guesses:  3624
+total length of set:  4136
+correct guesses:  895
+total length of set:  1034
+class occurances:  {0: 2949, 1: 1187}
+length of feat occur:  3001
+training accuracy:  0.8762088974854932
+test accuracy:  0.8655705996131529
+correct guesses:  3605
+total length of set:  4136
+correct guesses:  882
+total length of set:  1034
+class occurances:  {0: 2950, 1: 1186}
+length of feat occur:  3001
+training accuracy:  0.871615087040619
+test accuracy:  0.8529980657640233
+correct guesses:  3642
+total length of set:  4136
+correct guesses:  909
+total length of set:  1034
+class occurances:  {0: 2932, 1: 1204}
+length of feat occur:  3001
+training accuracy:  0.8805609284332688
+test accuracy:  0.879110251450677
+train accuracies for laplace k =  1 :  [0.8718568665377177, 0.8728239845261122, 0.8762088974854932, 0.871615087040619, 0.8805609284332688]
+test accuracies for laplace k =  1 :  [0.8810444874274661, 0.8762088974854932, 0.8655705996131529, 0.8529980657640233, 0.879110251450677]
+avg train accuracy:  0.8746131528046421
+avg test accuracy:  0.8709864603481625
+correct guesses:  3587
+total length of set:  4136
+correct guesses:  903
+total length of set:  1034
+class occurances:  {0: 2901, 1: 1235}
+length of feat occur:  3001
+training accuracy:  0.8672630560928434
+test accuracy:  0.8733075435203095
+correct guesses:  3584
+total length of set:  4136
+correct guesses:  902
+total length of set:  1034
+class occurances:  {0: 2948, 1: 1188}
+length of feat occur:  3001
+training accuracy:  0.8665377176015474
+test accuracy:  0.8723404255319149
+correct guesses:  3604
+total length of set:  4136
+correct guesses:  889
+total length of set:  1034
+class occurances:  {0: 2949, 1: 1187}
+length of feat occur:  3001
+training accuracy:  0.8713733075435203
+test accuracy:  0.8597678916827853
+correct guesses:  3594
+total length of set:  4136
+correct guesses:  875
+total length of set:  1034
+class occurances:  {0: 2950, 1: 1186}
+length of feat occur:  3001
+training accuracy:  0.8689555125725339
+test accuracy:  0.8462282398452611
+correct guesses:  3620
+total length of set:  4136
+correct guesses:  905
+total length of set:  1034
+class occurances:  {0: 2932, 1: 1204}
+length of feat occur:  3001
+training accuracy:  0.8752417794970987
+test accuracy:  0.8752417794970987
+train accuracies for laplace k =  2 :  [0.8672630560928434, 0.8665377176015474, 0.8713733075435203, 0.8689555125725339, 0.8752417794970987]
+test accuracies for laplace k =  2 :  [0.8733075435203095, 0.8723404255319149, 0.8597678916827853, 0.8462282398452611, 0.8752417794970987]
+avg train accuracy:  0.8698742746615087
+avg test accuracy:  0.8653771760154738
+correct guesses:  3566
+total length of set:  4136
+correct guesses:  898
+total length of set:  1034
+class occurances:  {0: 2901, 1: 1235}
+length of feat occur:  3001
+training accuracy:  0.8621856866537717
+test accuracy:  0.8684719535783365
+correct guesses:  3568
+total length of set:  4136
+correct guesses:  896
+total length of set:  1034
+class occurances:  {0: 2948, 1: 1188}
+length of feat occur:  3001
+training accuracy:  0.8626692456479691
+test accuracy:  0.8665377176015474
+correct guesses:  3581
+total length of set:  4136
+correct guesses:  882
+total length of set:  1034
+class occurances:  {0: 2949, 1: 1187}
+length of feat occur:  3001
+training accuracy:  0.8658123791102514
+test accuracy:  0.8529980657640233
+correct guesses:  3573
+total length of set:  4136
+correct guesses:  873
+total length of set:  1034
+class occurances:  {0: 2950, 1: 1186}
+length of feat occur:  3001
+training accuracy:  0.8638781431334622
+test accuracy:  0.844294003868472
+correct guesses:  3599
+total length of set:  4136
+correct guesses:  902
+total length of set:  1034
+class occurances:  {0: 2932, 1: 1204}
+length of feat occur:  3001
+training accuracy:  0.870164410058027
+test accuracy:  0.8723404255319149
+train accuracies for laplace k =  3 :  [0.8621856866537717, 0.8626692456479691, 0.8658123791102514, 0.8638781431334622, 0.870164410058027]
+test accuracies for laplace k =  3 :  [0.8684719535783365, 0.8665377176015474, 0.8529980657640233, 0.844294003868472, 0.8723404255319149]
+avg train accuracy:  0.8649419729206962
+avg test accuracy:  0.8609284332688588
+correct guesses:  3559
+total length of set:  4136
+correct guesses:  894
+total length of set:  1034
+class occurances:  {0: 2901, 1: 1235}
+length of feat occur:  3001
+training accuracy:  0.8604932301740812
+test accuracy:  0.8646034816247582
+correct guesses:  3549
+total length of set:  4136
+correct guesses:  893
+total length of set:  1034
+class occurances:  {0: 2948, 1: 1188}
+length of feat occur:  3001
+training accuracy:  0.8580754352030948
+test accuracy:  0.8636363636363636
+correct guesses:  3566
+total length of set:  4136
+correct guesses:  878
+total length of set:  1034
+class occurances:  {0: 2949, 1: 1187}
+length of feat occur:  3001
+training accuracy:  0.8621856866537717
+test accuracy:  0.8491295938104448
+correct guesses:  3551
+total length of set:  4136
+correct guesses:  870
+total length of set:  1034
+class occurances:  {0: 2950, 1: 1186}
+length of feat occur:  3001
+training accuracy:  0.8585589941972921
+test accuracy:  0.8413926499032882
+correct guesses:  3584
+total length of set:  4136
+correct guesses:  901
+total length of set:  1034
+class occurances:  {0: 2932, 1: 1204}
+length of feat occur:  3001
+training accuracy:  0.8665377176015474
+test accuracy:  0.8713733075435203
+train accuracies for laplace k =  4 :  [0.8604932301740812, 0.8580754352030948, 0.8621856866537717, 0.8585589941972921, 0.8665377176015474]
+test accuracies for laplace k =  4 :  [0.8646034816247582, 0.8636363636363636, 0.8491295938104448, 0.8413926499032882, 0.8713733075435203]
+avg train accuracy:  0.8611702127659575
+avg test accuracy:  0.8580270793036752
