@@ -62,7 +62,7 @@ print(type(aggregate_data[5]))
 
 
 # booleanize the data
-boolean_param = 64
+boolean_param = 1
 start_time = time.time()
 bool.booleanize(aggregate_data, boolean_param) # on or off
 print("booleanize img data time: ", time.time() - start_time)
@@ -73,8 +73,6 @@ start_time = time.time()
 # overrides the current data set
 #bool.booleanize_occurances(aggregate_mail_data) # on or off
 print("booleanize mail data time: ", time.time() - start_time)
-
-
 
 # remove two random points from email data to make div by 5
 r = random.randint(0, len(aggregate_mail_data) - 1)
@@ -96,7 +94,7 @@ mail_fold = ff.five_fold(aggregate_mail_data)
 # each of len 785 where array[0] is the label and all other is img data.
 
 # create instance of model
-results = open('mail_m_100_results.txt', "w")
+results = open('image_b_100_results.txt', "w")
 test_accuracies = []
 train_accuracies = []
 trial_num = 0
@@ -105,8 +103,8 @@ trial_num = 0
 if True:
     for laplace_k in range(100,101):
         results.write(f'Laplace Smoothing k = {laplace_k}\n')
-        for tr_te_partition in mail_fold: #img_fold or mail_fold
-            model1 = m_model(tr_te_partition, mail_labels, 3001) #img_labels or mail_labels
+        for tr_te_partition in img_fold: #img_fold or mail_fold
+            model1 = b_model(tr_te_partition, img_labels, 785) #img_labels or mail_labels
 
             # train the current partition with the current k
             start_time = time.time()
